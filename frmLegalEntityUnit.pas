@@ -16,9 +16,6 @@ type
     procedure TitleChanged(const ATitle: string; var DoCloseWebView: boolean);
   end;
 
-
-
-
   TfrmLegalEntity = class(TForm)
     Memo1: TMemo;
     Memo2: TMemo;
@@ -168,20 +165,20 @@ procedure TfrmLegalEntity.createauthForm;
 
 var wf: mForm;
 begin
-  //создаем окно с браузером для перенаправления пользователя на страницу Google
+  //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Google
   wf := mform.Create(self);
   try
-    //определяем обработчик события смены Title
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ Title
   //  wf.OnTitleChanged:=mForm.TitleChanged();
-    //показываем окнои открываем в браузере URL с формой подтверждения доступа
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ URL пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //    wf.ShowModalWithURL(OAuth2Authenticator_PreProd.AuthorizationRequestURI);
    WebBrowser1.Navigate(OAuth2Authenticator_PreProd.AuthorizationRequestURI);
   finally
     wf.Release;
   end;
-  //меняем AuthCode на AccessToken
+  //пїЅпїЅпїЅпїЅпїЅпїЅ AuthCode пїЅпїЅ AccessToken
   OAuth2Authenticator_PreProd.ChangeAuthCodeToAccesToken;
-  //выводим значения ключей в Memo
+  //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Memo
   Memo1.Lines.Add(OAuth2Authenticator_PreProd.AccessToken);
   Memo1.Lines.Add(OAuth2Authenticator_PreProd.RefreshToken);
   Memo1.Lines.Add(DateTimeToStr(OAuth2Authenticator_PreProd.AccessTokenExpiry));
