@@ -1,4 +1,4 @@
-unit frmLegalEntityUnit;
+﻿unit frmLegalEntityUnit;
 
 interface
 
@@ -172,7 +172,7 @@ begin
   //  wf.OnTitleChanged:=mForm.TitleChanged();
     //���������� ����� ��������� � �������� URL � ������ ������������� �������
 //    wf.ShowModalWithURL(OAuth2Authenticator_PreProd.AuthorizationRequestURI);
-   WebBrowser1.Navigate(OAuth2Authenticator_PreProd.AuthorizationRequestURI);
+//   WebBrowser1.Navigate(OAuth2Authenticator_PreProd.AuthorizationRequestURI);
   finally
     wf.Release;
   end;

@@ -135,7 +135,6 @@ object frmLegalEntity: TfrmLegalEntity
       '}')
     TabOrder = 0
     WordWrap = False
-    ExplicitHeight = 165
   end
   object Button2: TButton
     Left = 8
@@ -172,7 +171,6 @@ object frmLegalEntity: TfrmLegalEntity
     Anchors = [akLeft, akTop, akRight]
     TabOrder = 5
     Text = 'api/legal_entities'
-    ExplicitWidth = 422
   end
   object Button1: TButton
     Left = 860
@@ -183,7 +181,6 @@ object frmLegalEntity: TfrmLegalEntity
     Caption = 'Req'
     TabOrder = 6
     OnClick = Button1Click
-    ExplicitLeft = 676
   end
   object Edit3: TEdit
     Left = 8

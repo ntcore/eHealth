@@ -38,7 +38,10 @@ implementation
 {$R *.dfm}
 
 
+
 procedure TfrmMain.Button1Click(Sender: TObject);
+var
+  a:string;
 begin
     RESTRequest1.Execute;
 end;
