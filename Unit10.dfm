@@ -281,12 +281,12 @@ object Form10: TForm10
     ResponseJSON = RESTResponse1
     RootElement = 'data'
     NestedElements = True
-    Left = 624
-    Top = 168
+    Left = 464
+    Top = 208
   end
   object RESTResponse1: TRESTResponse
-    Left = 568
-    Top = 296
+    Left = 416
+    Top = 304
   end
   object OAuth2Authenticator1: TOAuth2Authenticator
     AccessToken = '7b341071a99411235bcd'
