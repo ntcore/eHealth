@@ -1,0 +1,25 @@
+HTTP/1.1 501 Not Implemented
+Date: Mon, 04 Mar 2019 09:30:34 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 174
+Connection: keep-alive
+Set-Cookie: __cfduid=d63daa9f82b36cf003e6ea1018bce65a31551691834; expires=Tue, 03-Mar-20 09:30:34 GMT; path=/; domain=.ehealth-ukraine.org; HttpOnly; Secure
+Cache-Control: max-age=0, private, must-revalidate
+Cross-Origin-Window-Policy: deny
+Vary: Accept-Encoding
+Via: kong/0.14.1
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Kong-Proxy-Latency: 84
+X-Kong-Upstream-Latency: 21
+X-Permitted-Cross-Domain-Policies: none
+X-Ratelimit-Limit-Minute: 200
+X-Ratelimit-Remaining-Minute: 198
+X-Request-Id: 4341a505-befc-4b69-920a-f61c195e6f43#51478
+X-Xss-Protection: 1; mode=block
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4b22d50b8bf883f4-KBP
+
+{"error":{"type":"internal_error"},"meta":{"code":501,"request_id":"4341a505-befc-4b69-920a-f61c195e6f43#51478","type":"object","url":"http://api-svc.il/api/legal_entities"}}
