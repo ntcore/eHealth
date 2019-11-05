@@ -34,7 +34,7 @@ begin
  SMTP.Host := 'smtp.ukr.net';
   SMTP.Port:=25;
   SMTP.Username:='sanches_lg@ukr.net';
-  SMTP.Password:='Pravilo111';
+  SMTP.Password:='';
 //  SMTP.AuthType := atLogin;
   with IdMessage do
      begin
