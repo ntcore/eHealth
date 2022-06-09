@@ -32,10 +32,10 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
  SMTP.Host := 'smtp.ukr.net';
-  SMTP.Port:=25;
+  SMTP.Port:=465 ;
   SMTP.Username:='sanches_lg@ukr.net';
-  SMTP.Password:='';
-//  SMTP.AuthType := atLogin;
+  SMTP.Password:='B16BDW5GsbG7afXQ';
+  SMTP.AuthType := satSASL;
   with IdMessage do
      begin
       Body.Add('Test');
@@ -45,9 +45,9 @@ begin
       end;
    SMTP.Connect;
 
-  FIdSSLIOHandlerSocketOpenSSL.Destination := AHost+':'+IntToStr(APort);
-  FIdSSLIOHandlerSocketOpenSSL.Host := AHost;
-  FIdSSLIOHandlerSocketOpenSSL.Port := APort;
+  FIdSSLIOHandlerSocketOpenSSL.Destination := SMTP.Host+':'+IntToStr(SMTP.Port);
+  FIdSSLIOHandlerSocketOpenSSL.Host := SMTP.Host;
+  FIdSSLIOHandlerSocketOpenSSL.Port := SMTP.Port;
   FIdSSLIOHandlerSocketOpenSSL.SSLOptions.Method := sslvSSLv3;
 
   SMTP.IOHandler := fIdSSLIOHandlerSocketOpenSSL;
